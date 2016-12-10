@@ -7,12 +7,20 @@ This package builds `docker build ` command using meta info from git:
 - last commit author
 - git user name
 
+## Prerequisites
+
+This package depends on `json` and `chalk-cli`.  You can install them with:
+
+```
+npm i -g json chalk-cli
+```
+
 ## Installation
 
 Add to project's dev dependencies
 
 ```
-npm i -D dokcer-build-with-meta
+npm i -D docker-build-with-meta
 ```
 
 Use as part of build process (add to "scripts" section in package.json):
@@ -28,7 +36,7 @@ Use as part of build process (add to "scripts" section in package.json):
 Run in directory with package.json and .git
 
 ```
-docker-build-with-meta -t latest -n projectname -p
+./node_modules/docker-build-with-meta/build.sh -t latest -n projectname -p
 ```
 
 all arguments are optional:
